@@ -1,1 +1,1 @@
-# Electron-Demo-Application
+# Electron-Demo-Desktop-Application
