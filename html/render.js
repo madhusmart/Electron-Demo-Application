@@ -17,7 +17,7 @@ function serializeToJson(serializer){
     // console.log('_string: ', _string);
     return JSON.parse(_string);
 }
-
+/*********** Insert Function ************/
 $(document).ready(function () {
   $('#submit').click(function () {
     var str = $( "form" ).serializeArray();
@@ -39,11 +39,12 @@ $(document).ready(function () {
            assert.equal(null, err);
         })
     })
-    alert("Data Inserted Successfully");
+    alert("User Inserted Successfully");
     })
 
 })
 
+/*********** Select Function ************/
 var url = 'mongodb://localhost/Mongo';
 // Use connect method to connect to the Server
 MongoClient.connect(url, function(err, db) {
@@ -113,21 +114,7 @@ function edit_user(user)
 }
 
 
-/******** Update *********/
-function serializeToJson(serializer){
-    var _string = '{';
-    for(var ix in serializer)
-    {
-        var row = serializer[ix];
-        _string += '"' + row.name + '":"' + row.value + '",';
-    }
-    var end =_string.length - 1;
-    _string = _string.substr(0, end);
-    _string += '}';
-    // console.log('_string: ', _string);
-    return JSON.parse(_string);
-}
-
+/******** Update Function *********/
 jQuery(document).ready(function () {
   jQuery('#save').click(function () {
 
